@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>karim samir's website</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1"> 
+      
+          
+  <!-- soret el mawke3 -->
+      
+      <!-- <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon"> -->
+      
+      <!-- jQuery-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <link rel="stylesheet" href="css-home/style.css">
+	
+	<script type="text/javascript" src="script/myscript.js"></script>
+</head>
+
+
+<body>
+<!-- start header -->
+<header class="header">
+  <div>
+<h2 onclick="window.location.href='portofolio-home.html'">KS</h2>
+  </div>
+
+
+    <nav>
+      <ul>
+        <li><a href="portofolio-home.html">Home</a></li>
+        <li><a href="portofolio-about.html">About</a></li>
+        <li class="all-works"><a href="portofolio-allMyWorks.html">All my works</a> <i class="fas fa-chevron-right arrow-right"></i> <i class="fas fa-chevron-down arrow-down"></i>
+          <ul class="inside-works">
+          <li><a href="portofolio-filmmakingWorks.html">Filmmaking works</a></li>
+          <li><a href="portofolio-programmer.html">programmer works</a></li>
+        </ul>
+        </li>
+        <li><a href="portofolio-contact.html">Contact</a></li>
+      </ul>
+    </nav>
+ 
+    <!-- show burger -->
+    <i onclick="showBurger();" id="burger1" class="fas fa-bars show-burger"></i>
+	
+			<!-- hide close -->
+		
+		<i onclick="hideBurger();" id="close2" class="fas fa-times close-burger"></i>
+
+    <div class="inside-burger">
+      <nav>
+        <ul>
+          <li><a href="portofolio-home.html">Home</a></li>
+          <li><a href="portofolio-about.html">About</a></li>
+          <li class="all-works-inside-burger"><a >All my works</a> <i class="fas fa-chevron-right arrow-right"></i> <i class="fas fa-chevron-down arrow-down"></i>  </li>
+            <!-- <ul class="inside-works"> -->
+              <li class="all-works"><a href="portofolio-allMyWorks.html">All works</a></li>
+            <li class="filmmaking-works"><a href="portofolio-filmmakingWorks.html">Filmmaking works</a></li>
+            <li class="programmer-works"><a href="portofolio-programmer.html">Programmer works</a></li>
+          <!-- </ul> -->
+          
+          <li><a href="portofolio-contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  
+</header>
+
+<!-- end header -->
+
+<!-- start section 1 title -->
+<section class="home-section1">
+  <div>
+<h1>Writer & Filmmaking director</h1>
+<p>front end developer <br> who writes clean code</p>
+  </div>
+
+  <!-- <div>
+<img src="./images/halfandhalf.jpg" alt="" />
+  </div> -->
+
+  <div>
+    <h1> programmer, web developper  </h1> <!--Coder<>-->
+    <p>front end developer <br> who writes clean code</p>
+  </div>
+</section>
+<!-- end section 1 title -->
+
+<!-- start section 2 works -->
+<section class="home-section2">
+  
+  <h3 data-content="some of my works"></h3> <!--some of my works-->
+
+  <article> 
+   
+    <div>
+      <a href="https://karimsamir112.github.io/Todo-app/">
+<img src="./images-of-my-works/programmer/todo-app1.png" alt="" />
+
+  <h4>Todo app</h4> <p>web app, practice</p>
+  
+<span><i class="fas fa-chevron-right"></i></span>
+</a>
+    </div>
+  
+
+  <div>
+    <a href="">
+    <img src="./images-of-my-works/programmer/natures10.png" alt=""/>
+    
+      <h4>Natures</h4> <p>web app, for agency</p>
+      
+    <span><i class="fas fa-chevron-right"></i></span>
+    </a>
+        </div>
+
+    <div>
+      <a href="">
+      <img src=".//images-of-my-works/programmer/tacha9.png" alt=""/>
+      
+        <h4>Tacha</h4> <p>web app, for agency</p>
+        
+      <span><i class="fas fa-chevron-right"></i></span>
+      </a>
+          </div>
+
+    <div>
+      <a href="">
+      <img src="./images-of-my-works/filmmaking&other/rotation.png" alt=""/>
+      
+        <h4>rotation film</h4> <p>direct,montage</p>
+        
+      <span><i class="fas fa-chevron-right"></i></span>
+      </a>
+          </div>
+
+      <div>
+        <a href="">
+        <img src="./images-of-my-works/filmmaking&other/the theif.png" alt=""/>
+        
+          <h4>thief film</h4> <p>write,direct,montage</p>
+          
+        <span><i class="fas fa-chevron-right"></i></span>
+        </a>
+            </div>
+
+      <div>
+        <a href="">
+        <img src="./images-of-my-works/filmmaking&other/fire.png" alt=""/>
+        
+          <h4>fire film</h4> <p>direct,montage</p>
+          
+        <span><i class="fas fa-chevron-right"></i></span>
+        </a>
+            </div>
+
+  </article>
+
+  <button onclick="window.location.href='portofolio-allMyWorks.html'">show more <i class="fas fa-chevron-right"></i> </button>
+</section>
+<!-- end section 2 works -->
+
+<!-- start section 3 about -->
+<section class="home-section3">
+  <div>
+<img src="./images/download.png" alt=""/>
+  </div>
+
+  <div>
+    <h3><strong>About me</strong></h3>
+<p>I grew up by the rocky coast of Malta, where I pursued a career as a government
+   lawyer combatting illegal fisheries. In the past years, the urge to switch contexts
+    and dive further into the tech world grew stronger. In 2019 I graduated from the 
+    world's leading full-stack coding bootcamp, Le Wagon. Following further studies and
+     projects I decided to concentrate my skills into front-end development,
+      creating functional components and websites with flair and precision.
+       I hence focus in writing accessible HTML, using modern CSS practices
+        and developing clean Vanilla JavaScript functions. I am also testing 
+        the waters with React.js.</p>
+
+        <button>read more <i class="fas fa-chevron-right"></i> </button>
+  </div>
+</section>
+<!-- end section 3 about -->
+
+
+<!-- start footer -->
+<footer>
+	<section>
+	<h2>KS</h2>
+		</section>
+		
+		<section>
+	<nav>
+			<ul>
+				<li><a href="portofolio-home.html">Home</a></li>
+			<li><a href="portofolio-about.html">About</a></li>
+			<li><a href="portofolio-allMyWorks.html">All my works</a></li>
+			<li><a href="portofolio-contact.html">Contact us</a></li> 
+
+			</ul>
+    </nav>
+			
+	
+			
+		</section>
+		
+		<section>
+		<i class="fab fa-facebook" onclick="window.location.href=''"></i> 
+			<i class="fab fa-instagram" onclick="window.location.href=''"></i>
+		</section>
+		
+		<section>
+		<h5>Copyright © 2022 karim samir. All rights reserved.</h5>
+    <br>
+    
+		</section>
+		
+	</footer>
+
+<!-- end footer -->
+
+<i id="arrow-button" class="fas fa-chevron-up"></i>
+<script src="https://kit.fontawesome.com/682febeeb9.js" crossorigin="anonymous"></script> 
+</body>
+</html>

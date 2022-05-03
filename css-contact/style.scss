@@ -1,0 +1,147 @@
+@import "../css-constat/style.scss";@import "../css-constat/style.scss";
+
+// selected page
+header{
+    nav{
+        li:first-of-type{
+            a{
+                opacity: 1;
+            }
+        }
+        li:nth-of-type(4){
+            a{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+// start section 1 
+section:first-of-type{
+    margin-top: -50px;
+width: 100%;
+height: 600px;
+///margin-top: 20px;
+background: url("../images/contact.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+
+div{
+position: relative;
+top:20px;
+
+h1, p{
+    text-align: center;
+   word-break: break-all;
+}
+}
+
+}
+// end section 1
+.show-contact2{
+    h3{
+        animation: showSent 1s ease-in-out forwards;
+        @keyframes showSent {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+}
+// start section 2
+.contact-section2{
+    text-align: center;
+    margin-top: 30px;
+//margin: auto;
+
+h3{
+    //position: absolute;
+    text-align: center;
+    font-family: cursive;
+    opacity: 0;
+}
+    form{
+        margin-top: 100px;
+		//margin-right: 10%;
+		h4{
+			margin-top: 50px;
+           //text-align: left;
+		}
+		
+		input, textarea{
+			font-size: 20px;
+			width:400px;
+			height: 60px;
+			border: 0.1px solid $hoverColor;
+			padding-left: 20px;
+			color:$mainColor;
+			
+			
+		}
+        button{
+            margin-top: 30px;
+            color:black;
+            text-align: center;
+            //width:190px;
+            padding: 1px;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: white;
+            border:2px solid white;
+           // display: flex;
+             column-gap: 10px;
+            h4{
+                color: $mainColor;
+                margin:5px;
+            }
+
+            i{
+				display: none;
+				font-size: 20px;
+				color:$hoverColor;
+			}
+        }
+        button:hover{
+            background-color: $mainColor;
+            //color:white;
+            border:2px solid $secondColor;
+            cursor: pointer;
+        }
+        button:hover h4{
+            color: $secondColor;
+        }
+        // button{
+		// 	h4, i{
+		// 		margin-top: 10px;
+		// 	}
+		// 	i{
+		// 		display: none;
+		// 		font-size: 20px;
+		// 		color:$hoverColor;
+		// 	}
+		/*	hr{
+                 border-color: $mainColor;
+			} */
+		//}
+		
+    }
+}
+
+footer{
+    margin-top: 70px;
+}
+// end section 2
+
+@media (max-width:1000px) {
+    // start section 1 
+section:first-of-type{
+
+width: 100%;
+height: 350px;
+
+
+}
+// end section 1
+}
