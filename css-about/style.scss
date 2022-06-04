@@ -1,0 +1,350 @@
+@import "../css-constat/style.scss";
+
+// selected page
+header{
+    nav{
+        li:first-of-type{
+            a{
+                opacity: 1;
+            }
+        }
+        li:nth-of-type(2){
+            a{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+body{
+	overflow-x: hidden;
+	width: 100%;
+
+}
+
+// start section 1 
+section:first-of-type{
+    margin-top: -50px;
+width: 100%;
+height: 600px;
+///margin-top: 20px;
+background: url("../images/about.webp");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+
+div{
+position: relative;
+top:20px;
+
+h1, p{
+    text-align: center;
+   word-break: break-all;
+}
+}
+
+}
+// end section 1
+section h3{
+    text-align: center;
+    color:$secondColor;
+    font-family: cursive;
+   opacity: 0; // to animate
+height: 50px;
+} 
+
+// start show all sections 
+.show-section2, .show-section3, .show-section4, .show-section5{
+    h3{
+       // font-family: cursive;
+        animation: showSent1 1s ease-in-out forwards;
+        @keyframes showSent1 {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+}
+// end shoe all sections
+
+// start section 2
+.about-section2{
+    margin-top: 50px;
+    text-align: center;
+  /*  h3{
+       
+    } */
+    article{
+    text-align: left;
+    margin-top:70px;
+    display: flex;
+    justify-content: space-around;
+
+    gap: 25px;
+    padding-left: 10%;
+    padding-right: 10%; 
+    //flex-wrap: wrap;
+opacity: 0;
+
+    div{
+        width: 50%;
+        word-break: break-all;
+        p{
+            width: 100%;
+            line-height: 30px;
+            
+        }
+    }
+
+    }
+
+}
+
+.show-section2{
+
+ /*  h3{
+        animation: showSent1 1s ease-in-out forwards;
+        @keyframes showSent1 {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }  */
+
+    article{
+opacity: 1;
+        div:first-of-type{
+animation: showabout1 1s ease-in-out forwards;
+
+@keyframes showabout1 {
+    0%{
+        position: relative;
+        left:-500px;
+        opacity: 0;
+    }
+    100%{
+        position: relative;
+        left: 0px;
+        opacity: 1;
+    }
+}
+        }
+
+div:last-of-type{
+    animation: showabout2 1s ease-in-out forwards;
+    
+    @keyframes showabout2 {
+        0%{
+            position: relative;
+            left:500px;
+            opacity: 0;
+        }
+        100%{
+            position: relative;
+            left: 0px;
+            opacity: 1;
+        }
+    }
+            }
+    }
+}
+// end section 2
+
+// start section 3 and 5 
+.about-section3, .about-section5{
+    margin-top: 100px;
+
+    article{
+        text-align: left;
+        margin-top:50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+        gap: 25px;
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+
+        div{
+            background-color: $secondColor;
+            box-shadow: 5px 5px 5px grey;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+            height: 300px;
+           
+            opacity: 0; // to animate
+
+            img{
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+}
+    // start animation for section 3 and 5
+.show-section3, .show-section5 {
+   
+  /*  h3{
+        animation: showSent2 1s ease-in-out forwards;
+        @keyframes showSent2 {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    } */
+article{
+
+    div{
+        animation: showBooks 1s ease-in-out forwards;
+
+        @keyframes showBooks {
+            0%{
+                opacity: 0;
+                position: relative;
+                left:-500px
+            }
+            100%{
+                position: relative;
+                left:0px;
+                opacity: 1;
+            }
+        }
+    } // div
+}
+
+}
+// end animation for section 3
+
+// end section 3 and 5
+
+// start section 4 
+.about-section4{
+    margin-top: 100px;
+
+    article{
+       // text-align: left;
+        margin-top:50px;
+        display: flex;
+        //grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+        gap: 25px;
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    img{
+        height: 400px;
+        width: 300px;
+        opacity: 0;
+    }
+    img:nth-of-type(2), img:nth-of-type(3){
+       // position: relative;
+        margin-top:80px;
+    }
+    }
+}
+.show-section4{
+article{
+    img{
+        animation: showModels 1s ease-in-out forwards;
+
+        @keyframes showModels {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+    img:nth-of-type(2){
+        animation-delay: 0.5s;
+    }
+    img:nth-of-type(3){
+        animation-delay: 1s;
+    }
+}
+}
+
+
+// end section 4
+
+
+//footer 
+footer{
+    margin-top: 100px;
+} 
+
+@media (max-width:1000px) {
+    // start section 1 
+section:first-of-type{
+
+width: 100%;
+height: 350px;
+
+}
+// end section 1
+
+// start section 2
+.about-section2{
+
+    article{
+        text-align: center;
+        margin-top:70px;
+        display: block;
+        //justify-content: space-around;
+    
+        gap: 0px;
+        padding-left: 5%;
+        padding-right: 5%; 
+        //flex-wrap: wrap;
+
+        div{
+            margin-top: -30px;
+            width: 100%;
+        }
+        div:last-of-type{
+            margin-top: 30px;
+        }
+    }
+}
+// end section 2
+
+// start section 3 5
+.about-section3, .about-section5{
+    margin-top: 100px;
+}
+// end section 3 5
+
+// start section 4
+.about-section4{
+    margin-top: 100px;
+    article{
+        text-align: center;
+         margin-top:50px;
+         display: block;
+         padding-left: 5%;
+         padding-right: 5%;
+     img{
+         height: 400px;
+         width: 90%;
+        // margin-top: 50px;
+        // opacity: 0;
+     }
+     img:nth-of-type(2), img:nth-of-type(3), img:last-of-type{
+        // position: relative;
+         margin-top:50px;
+     }
+     img:nth-of-type(2){
+         margin-left:30px;
+     }
+     }
+}
+// end section 4
+}
