@@ -1,0 +1,631 @@
+$mainColor:#000000;
+$secondColor:#ffffff;
+$hoverColor:darkgreen;
+$mainSize:20px;
+$transition :all 0.3s ease-in-out;
+$map: (h1:$mainSize * 2.5 , h2:$mainSize * 2 , h3:$mainSize * 1.7 , h4:$mainSize * 1.4, p:$mainSize * 1);
+@each $elem , $size in $map {
+    
+    #{$elem}{
+        font-size: $size;
+       // color:$secondColor;
+        letter-spacing: 3px;
+        }
+    }
+    p{
+        color: grey;
+        letter-spacing: 1px;
+        margin-top: 0px;
+        
+    }
+    h2{
+        text-decoration: underline;
+    }
+    h2::first-letter{
+        color:$hoverColor;
+    }
+    
+    a{
+        text-decoration: none;
+        transition: $transition;
+       // color:$secondColor;
+    }
+    a:hover{
+        opacity: 0.7;
+        padding-bottom: 10px;
+        border-bottom: 4px solid $hoverColor;
+ }
+
+.allBody{
+		display: none;
+		overflow-x: hidden;
+		// the cursor 
+		
+	}
+// onload
+	.loading{
+		
+			text-align: center;
+		position: relative;
+		top:300px;
+		
+		img{
+			width:250px;
+			height: 250px;
+		}
+		
+		// loading logo2 image
+		.loadingImage{
+				position: absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			animation: load1 1s ease-in-out 0s infinite normal forwards;
+		}
+		
+		@keyframes load1{
+			0%{
+				
+             // transform: rotate(0deg);
+				opacity: 0;
+			}
+			100%{
+				//transform: rotate(360deg);
+				 opacity: 1;
+			}
+		}
+		
+	/*	#logoLoading{
+			animation: load2 1s ease-in-out 0s infinite normal forwards;
+		}
+		
+		@keyframes load2{
+			0%{
+              opacity: 0.5;
+			}
+			100%{
+				opacity: 1;
+			}
+		} */
+	}
+
+
+
+ @mixin buttons(){
+     text-align: center;
+     background-color: $secondColor;
+     color:$hoverColor;
+     border:1px solid $secondColor;
+     border-radius: 5px;
+     cursor: pointer;
+     width: 140px;
+     height: 40px;
+
+     &:hover{
+        color:$secondColor;
+        background-color: $hoverColor;
+        border:1px solid $hoverColor;
+    }
+    &:hover i{
+        color:$secondColor;
+    }
+ }
+ 
+*{
+    transition: $transition;
+    color:$secondColor;
+    padding: 0px;
+    margin: 0px;
+   
+}
+    body{
+        left: 0;
+        overflow-x: hidden;
+		overflow-y: hidden;
+        font-size: $mainSize;
+        background-color: $mainColor;
+  
+    }
+
+    // start header
+header{
+   // width: 100%;
+  height: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 35px;
+   
+    display: flex;
+    justify-content: space-between;
+    
+    h2{
+        position: relative;
+        top:-15px;
+        cursor: pointer;
+    }
+    h2:hover{
+        animation: rotateLogo 1s ease-in-out forwards ;
+
+        @keyframes rotateLogo {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    nav{
+        li{
+            display: inline-block;
+			margin-left: 20px;
+			list-style-type: none;
+            
+            // a{
+            //     text-decoration: none;
+            //     transition: $transition;
+            //     color:$secondColor;
+            // }
+
+            // a:hover{
+            //        opacity: 0.7;
+            //        padding-bottom: 20px;
+            //        border-bottom: 4px solid $hoverColor;
+            // }
+        } // li
+        li:first-of-type{
+            a{
+                opacity: 0.7;
+            }
+        }
+
+    .all-works{
+        
+    i{
+        color:$secondColor;
+        font-size: 18px;
+         position: relative;
+         left:2px;
+        }
+        .arrow-down{
+            opacity: 0;
+            position: relative;
+            left: -8px;
+           // display: none;
+        }
+    
+    }
+
+    .all-works:hover .inside-works{
+        display: block;
+    }
+    .all-works:hover .arrow-right{
+        opacity: 0;
+       // display: none;
+    }
+    .all-works:hover .arrow-down{
+        opacity: 1;
+        //display: block;
+    }
+
+    .inside-works{
+        display: none;
+        position: absolute;
+        background-color: $mainColor;
+        padding: 30px;
+        animation: showInsideWorks 1s ease-in-out;
+
+        @keyframes showInsideWorks {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        li{
+            display: block;
+            margin-top: 20px;
+            margin-left: -10px;
+        }
+    }
+} // nav
+
+.show-burger, .close-burger{
+    
+        font-size: 25px;
+        display: none;
+        visibility: hidden;
+        position: absolute;
+        cursor: pointer;
+        animation: showBurgerAndShowClose 0.2s ease-in-out forwards;
+
+        @keyframes showBurgerAndShowClose {
+            0%{
+                transform: scale(0);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+}
+// hide icons
+.hide-show-and-close-burger{
+    animation: hideShowAndCloseBurger 0.5s ease-in-out forwards;
+
+    @keyframes hideShowAndCloseBurger {
+        0%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(0);
+           display: none;
+        }
+    }
+} // hide-show
+
+
+.inside-burger{
+   margin: 10px;
+    position: fixed;
+    visibility: visible;
+    display: none;
+   // margin: 50px auto;
+    opacity: 1;
+    top:100px;
+    left:5%;
+    //left:45%;
+    
+    background-color: $secondColor;
+    z-index: 100;
+    width:90%;
+    box-shadow: 5px 5px 5px grey;
+   
+
+    nav{
+       
+        li{
+            padding: 0px;
+            position: relative;
+            left: 0;
+            margin-left: 0px;
+            cursor: pointer;
+           // padding: 15px;
+           padding-top: 5px;
+           
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+            height: 30px;
+
+            a{
+                color:$hoverColor;
+            }
+
+            a:hover{
+                color:$secondColor;
+                opacity: 1;
+                padding-bottom: 0px;
+                border-bottom: 0px solid transparent;
+            }
+        }
+        li:hover{
+            background-color: $hoverColor;
+        }
+        li:hover a{
+            color:$secondColor;
+        }
+        li:hover i{
+            color:$secondColor
+        }
+        .all-works-inside-burger {
+
+            i{
+            color:$hoverColor;
+            font-size: 18px;
+            position: relative;
+            left:10px;
+            }
+            .arrow-down{
+                display: none;
+            }
+        }
+        
+
+        // hide film and prog works
+       .all-works, .filmmaking-works, .programmer-works{
+            display: none;
+            font-size: 17px;
+            position: relative;
+            left:5px;
+        }
+        .show-works{
+            display: block;
+            animation: showInsideWorks 1s ease-in-out;
+        }
+        .hide-works{
+           
+            animation: hideInsideWorks 1s ease-in-out;
+
+            @keyframes hideInsideWorks {
+                0%{
+                    opacity: 1;
+                    
+                }
+                100%{
+                    opacity: 0;
+                    //display: none;
+                }
+            }
+        }
+        
+    } // nav
+ 
+
+} // inside burger
+
+  
+// start show and hide inside burger 
+.show-inside-burger{
+    
+   // display: block;
+    animation: showInsideBurger 0.5s ease-in-out forwards;
+
+    @keyframes showInsideBurger {
+        0%{
+          opacity: 0;
+          transform: scaleX(0);
+          
+        }
+        100%{
+            opacity: 1;
+            transform: scaleX(1);
+            
+        }
+    }
+}
+
+.hide-inside-burger{
+    animation: hideInsideBurger 0.5s ease-in-out forwards;
+
+    @keyframes hideInsideBurger {
+        0%{
+            opacity: 1;
+            transform: scaleX(1);
+          }
+          100%{
+              opacity: 0;
+              transform: scaleX(0);
+          }
+    }
+}
+// end show and hide inside burger
+} // header
+
+// start fixed-header for scroll
+.fixed-header{
+    
+    position: fixed;
+	
+	width:87%;
+    background-color: $mainColor;
+    height: 50px;
+    
+    z-index: 100;
+     padding-top: 30px;
+     
+    //  padding-left: 100px;
+    //  padding-right: 100px;
+    
+} 
+
+// end fixed-header for scroll
+
+// end header
+
+
+
+
+
+
+// start footer 
+
+footer{
+	margin-top: 200px;
+	text-align: center;
+	position: relative;
+		//left:-2%;
+	
+	section{
+		margin-top: 50px;
+	}
+	section:first-of-type{
+        display: none;
+		h2{
+		text-align: center;
+    }
+	}
+	
+	section:nth-of-type(2){
+		display: block;
+		text-align: center;
+        // position: relative;
+        // left:-2%;
+		
+	nav{
+        ul{
+        
+        li{
+                text-align: center;
+            display: block;
+            margin-top: 20px;
+            list-style-type: none;
+            
+            // a{
+            //     color:$secondColor;
+            // }
+            // a:hover{
+            //     color:$hoverColor;
+            //     margin-left: 2px;
+            //     text-decoration: none;
+            // }
+            a:hover{
+                opacity: 0.7;
+                padding-bottom: 5px;
+                border-bottom: 4px solid $hoverColor;
+         }
+        } // li
+        } // ul
+    } // nav
+			
+	}
+	
+	section:nth-of-type(3){
+		display: inline-block;
+		position: relative;
+		left:-30px;
+		
+		i{
+			margin-left: 60px;
+		cursor: pointer;
+		}
+		i:hover{
+			color:$hoverColor;
+			transform: scale(1.2);
+		}
+	}
+	
+	section:last-of-type{
+		color:$secondColor;
+		margin-top: 50px;
+		text-align: center;
+		padding-left: 5%;
+		padding-right: 5%;
+		
+		h5{
+			letter-spacing: 0px;
+		}
+		
+	}
+}
+// end footer
+
+// start arrow button for scroll to top
+#arrow-button{
+    font-size: 20px;
+	display: none;
+	position: fixed;
+	bottom: 5%;
+	right:3%;
+	color:$hoverColor;
+	background-color: $secondColor;
+	padding: 15px;
+	border-radius: 50%;
+	cursor: pointer;
+	animation : showArrowButton 0.5s ease-in-out 1 normal forwards;
+
+    @keyframes showArrowButton{
+        from{
+            right:-5%;
+        }
+        to{
+            right: 3%;
+        }
+    }
+}
+#arrow-button:hover{
+    color:$secondColor;
+    background-color: $hoverColor;
+}
+
+.hide-arrow-button{
+    animation : hideArrowButton 0.5s ease-in-out 1 normal forwards;
+
+    @keyframes hideArrowButton{
+        from{
+           left: 0%;
+        }
+        to{
+            left:10%;
+            margin-left: 20px;
+        }
+    }
+    
+}
+// end arrow button for scroll to top
+
+
+// style for mobile size
+@media (max-width:1000px) {
+    
+
+    $map: (h1:$mainSize * 1.6 , h2:$mainSize * 1.5 , h3:$mainSize * 1.3 , h4:$mainSize * 1.1, p:$mainSize * 0.9);
+    @each $elem , $size in $map {
+        
+        #{$elem}{
+            font-size: $size;
+            // color:$secondColor;
+            letter-spacing: 3px;
+            }
+        }
+    
+        // start header
+        header{
+        padding-left: 5%;
+    padding-right: 5%;
+    
+    h2{
+        top:-7px;
+    }
+    nav{
+        display: none;
+    }
+    .show-burger, .close-burger{
+        display: none;
+        visibility: visible;
+        position: relative;
+        float: right;
+    }
+    .show-burger{
+        display: block;
+    }
+    
+    .inside-burger{
+       //display: block;
+       
+        nav{
+            display: block;
+        }
+    }
+    .show-inside-burger{
+        display: block;
+    }
+			
+			
+
+        }
+	// start fixed-header for scroll
+	.fixed-header{
+    
+    position: fixed;
+	
+	width:90%;
+    
+    
+} 
+
+    
+      
+        // end header
+
+        // start footer
+footer{
+    margin-top: 300px;
+}
+// end footer
+
+    }
